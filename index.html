@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVnK6R8IQ0r8l6S9Ntm6jv9bG5+/58g8vYzMzt2lX5Fj8j1iCk8UfGQYjcjdfMdbOro2Rz0r7U1r8Z+f4vY3BQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Молитвенная поддержка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  
+<!-- SEO -->
+<meta name="description" content="Церковь «Слово Жизни» в Великом Новгороде. Поделитесь вашей молитвенной нуждой анонимно — мы будем молиться за вас.">
+<meta name="keywords" content="церковь, молитва, молитвенные нужды, помощь, духовное наставление, Великий Новгород, Слово Жизни, евангельская церковь">
+
+<!-- Social Sharing -->
+<meta property="og:title" content="Церковь «Слово Жизни» | Поделитесь вашей молитвенной нуждой">
+<meta property="og:description" content="Поделитесь вашей молитвенной нуждой анонимно — мы будем молиться за вас.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wordlife.online">
+<meta property="og:image" content="img/cross.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Церковь «Слово Жизни» | Поделитесь вашей молитвенной нуждой">
+<meta name="twitter:description" content="Поделитесь вашей молитвенной нуждой анонимно — наша молитвенная команда будет молиться за вас.">
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+      text-decoration: none !important;
+    }
+    a:visited {
+      color: black !important;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f0f4ff, #ffffff);
+      color: #1f2937;
+    }
+    header {
+      background: linear-gradient(135deg, #0b5ed7 0%, #003f9e 100%);
+      color: white;
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 5px;
+      background: white;
+      border-radius: 10px;
+      opacity: 0.2;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      opacity: 0.95;
+      font-weight: 400;
+    }
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+    /*section:hover {
+      transform: translateY(-5px);
+    }*/
+    h2 {
+      color: #0b5ed7;
+      margin-top: 0;
+      font-size: 1.75rem;
+    }
+    ul {
+      padding-left: 1.25rem;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    .highlight {
+      background-color: #e7f1ff;
+      padding: 1rem;
+      border-left: 5px solid #0b5ed7;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+      font-size: 1.05rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+  header {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  section {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  ul {
+    font-size: 0.95rem;
+  }
+
+  .highlight {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+.contacts_link a {
+  color: black !important;
+}
+
+
+  .accordion-btn {
+    width: 100%;
+    text-align: left;
+    background: #e7f1ff;
+    color: #0b5ed7;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .accordion-btn:hover {
+    background: #d0e4ff;
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f9fbff;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+  }
+  .accordion-content p {
+    margin: 1rem 0;
+  }
+
+
+
+
+
+
+
+
+header {
+  background: radial-gradient(ellipse at top left, #0b5ed7 0%, #003f9e 60%, #001e4d 100%);
+  color: white;
+  padding: 3rem 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 25% !important;
+}
+
+header::before,
+header::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulse 10s infinite ease-in-out;
+}
+
+header::before {
+  top: -150px;
+  left: -150px;
+}
+
+header::after {
+  bottom: -150px;
+  right: -150px;
+}
+
+/* Контент поверх */
+header h1,
+header p,
+header .lang-switch {
+  position: relative;
+  z-index: 1;
+}
+
+/* Заголовок с градиентом */
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #ffffff, #a8c9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Подзаголовок */
+header p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  opacity: 0.95;
+  font-weight: 400;
+  color: #e5eaff;
+}
+
+/* Кнопка смены языка */
+header .lang-switch {
+  position: absolute !important;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(6px);
+  top: 1rem;
+  right: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+header .lang-switch:visited {
+  color: white !important;
+}
+
+header .lang-switch:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Анимация бликов */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 0.4; }
+}
+
+
+
+
+  .accordion-content a {
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+  }
+  .contact-item {
+    margin: 5px 0;
+  }
+  .contact-item i {
+    margin-right: 8px;
+  }
+
+
+
+
+
+
+
+
+
+#prayerInput {
+  width: 100%;
+  min-height: 120px;
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  resize: vertical;
+}
+
+#prayerInput:focus {
+  border: none; /* не рисуем новый бордер */
+  box-shadow: 0 0 15px rgba(102, 255, 240, 0.6),
+              0 0 30px rgba(102, 255, 240, 0.3);
+}
+
+
+  /* Кнопка */
+  #prayerForm button {
+    margin-top: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #00ffe0;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: white !important;
+  }
+
+  #prayerForm button:hover {
+    background-color: #00d4b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 224, 0.6);
+    color: white;
+  }
+
+  #popup {
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a1a; /* чуть светлее, мягче темный фон */
+  color: #a0fff4; /* мягкий бирюзовый, не режет глаз */
+  border: 2px solid #66fff0; /* тонкий и мягкий контур */
+  border-radius: 16px; /* чуть более закруглено */
+  padding: 25px 20px;
+  width: 320px;
+  box-shadow: 0 8px 25px rgba(0, 255, 224, 0.3), 0 4px 15px rgba(0,0,0,0.4); /* мягкая тень с лёгким свечением */
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #a0fff4;
+  transition: color 0.3s ease;
+}
+
+.popup-close:hover {
+  color: #66fff0; /* немного ярче при наведении */
+}
+
+
+
+
+
+
+
+
+
+  </style>
+
+
+
+  
+</head>
+<body>
+ 
+
+
+
+<header>
+  <h1>Молитва и поддержка</h1>
+  <p>Мы готовы выслушать, поддержать и молиться за вас в любых обстоятельствах</p>
+</header>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+  <!-- Блок 1 — Форма -->
+ <section>
+  <h2>🙏 Поделитесь вашей нуждой</h2>
+  <p>Всё анонимно и бесплатно. Мы передадим вашу просьбу нашей молитвенной команде.</p>
+  
+  <form id="prayerForm">
+    <textarea id="prayerInput" placeholder="Напишите вашу просьбу..." required></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+  
+ <div id="popup" class="popup">
+  <span id="popupClose" class="popup-close">&times;</span>
+  <p>Спасибо за доверие! Мы будем молиться за вашу нужду 🙏<br><br>
+  Ниже вы можете прочитать слова поддержки, советы и вдохновение, которые помогут вам справиться с трудностями и укрепить веру. Мы рядом с вами в молитве и поддержке.</p>
+</div>
+</section>
+
+
+
+
+
+  <!-- Блок 2 — Аккордеоны с трудностями -->
+  <section>
+    <h2>📖 Какие трудности вы сейчас проходите?</h2>
+    <p>Нажмите на тему, которая близка вашей ситуации, чтобы увидеть слова из Библии, которые могут вас поддержать.</p>
+
+    <div class="accordion">
+      <button class="accordion-btn">Проблемы в семье</button>
+      <div class="accordion-content">
+        <p>«Но я и дом мой будем служить Господу» (Нав. 24:15)</p>
+        <p>«Любовь долго терпит, милосердствует…» (1 Кор. 13:4–7)</p>
+        <p>«Что Бог сочетал, того человек да не разлучает» (Мк. 10:9)</p>
+      </div>
+
+      <button class="accordion-btn">Финансовые трудности</button>
+      <div class="accordion-content">
+        <p>«Бог же мой да восполнит всякую нужду вашу» (Флп. 4:19)</p>
+        <p>«Не заботьтесь ни о чём…» (Флп. 4:6)</p>
+        <p>«Господь — Пастырь мой; я ни в чём не буду нуждаться» (Пс. 22:1)</p>
+      </div>
+
+      <button class="accordion-btn">Болезнь или слабость</button>
+      <div class="accordion-content">
+        <p>«Ранами Его мы исцелились» (Ис. 53:5)</p>
+        <p>«Господь подкрепляет его на одре болезни» (Пс. 40:3)</p>
+        <p>«Бог — прибежище и сила» (Пс. 45:1)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок 3 — О нас -->
+<!-- Подключение Font Awesome (если ещё не подключено) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVnK6R8IQ0r8l6S9Ntm6jv9bG5+/58g8vYzMzt2lX5Fj8j1iCk8UfGQYjcjdfMdbOro2Rz0r7U1r8Z+f4vY3BQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<section>
+  <h2>ℹ️ Подробнее о нас</h2>
+  <div class="accordion">
+    <button class="accordion-btn">О нашей церкви</button>
+    <div class="accordion-content">
+      <p>Церковь «Слово Жизни»<br>
+      Великий Новгород, ул. Белова, 3</p>
+      
+      <p>Мы — община верующих, объединённых молитвой и поддержкой друг друга. Приходите на наши службы, общайтесь и растите духовно вместе с нами!</p>
+      
+      <h3>Расписание служений</h3>
+      <ul>
+        <li>Основные служения: воскресенье, 10:00</li>
+        <li>Молодёжные: воскресенье, 16:30</li>
+      </ul>
+
+
+
+
+      <h3>Контакты</h3>
+      <a href="https://wordlife.online" target="_blank"><i class="fas fa-globe"></i> Сайт</a>
+        <a href="https://vk.com/slovozhizninov" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a>
+        <a href="https://www.youtube.com/@slovo-vn/streams" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+      <p class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:novlife@mail.ru">novlife@mail.ru</a></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+</div>
+
+<script>
+  document.querySelectorAll('.accordion-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      if (button.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+  });
+</script>
+
+
+
+
+
+<script>
+  const form = document.getElementById('prayerForm');
+  const input = document.getElementById('prayerInput');
+  const popup = document.getElementById('popup');
+  const popupClose = document.getElementById('popupClose');
+
+  // Telegram bot settings
+  const TELEGRAM_BOT_TOKEN = '8397163248:AAH66vZ26j9AZHZp1MBtrmRg2GpkTvWoa3g';
+  const TELEGRAM_CHAT_ID = '-1002816987002';
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const message = input.value.trim();
+    if (!message) return;
+
+    // Отправка в Telegram
+    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${encodeURIComponent(message)}`;
+    try {
+      await fetch(url);
+      input.value = '';
+      popup.style.display = 'block';
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 10000);
+    } catch (err) {
+      alert('Ошибка отправки, попробуйте позже.');
+      console.error(err);
+    }
+  });
+
+  popupClose.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+</script>
+
+
+
+
+
+
+<footer>
+&copy; 2025 Церковь "Слово Жизни" г. Великий Новгород | ИНН 5321027846 | КПП 532101001 | ОГРН 1025300005334
+  
+</footer>
+
+</body>
+</html>
